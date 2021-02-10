@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include "list.h"
+
+
+extern long __bss_start;
+extern long __bss_end;
+
+
+void kernel_main() {
+
+	clearbss();
+	struct list_element c = {NULL, 0};
+	struct list_element b = {&c, 0}
+;
+}
