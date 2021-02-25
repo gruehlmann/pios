@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include "list.h"
+#include "led.h"
+
 
 extern long __bss_start;
 extern long __bss_end;
@@ -14,6 +16,15 @@ void kernel_main() {
 	struct list_element *head = &a;
 	return;
 
+
+
+
+	while (1){
+		led_on();
+		delay();
+		led_off();
+		delay();
+	}
 }
 
 int clearbss() {
