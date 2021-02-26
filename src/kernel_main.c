@@ -6,7 +6,7 @@
 extern long __bss_start;
 extern long __bss_end;
 
-
+int *mu_io_reg = 0x3F215040;
 void kernel_main() {
 
 	clearbss();
@@ -14,15 +14,19 @@ void kernel_main() {
 	struct list_element b = {&c, 0};
 	struct list_element a = {&b, 1};
 	struct list_element *head = &a;
+	
+	esp_printf(putc, "hello world");
+
+	
 	return;
 
 
 
 
-	while (1){
-		led_on();
-		delay();
-		led_off();
+//	while (1){
+//		led_on();
+//		delay();
+//		led_off();
 		delay();
 	}
 }
